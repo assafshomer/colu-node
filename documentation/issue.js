@@ -11,7 +11,7 @@ Colu.init('my_company', 'testnet', privateSeed, function (err, colu) {
   console.log('seed: ' + colu.getPrivateSeed())
   var nextAccount = 1 // colu.nextAccount
   console.log('nextAccount: ' + colu.nextAccount)
-  colu.ccIssue('bob_' + nextAccount, nextAccount, 1, function (err, data) {
+  colu.issue('bob_' + nextAccount, nextAccount, 1, function (err, data) {
     if (err) {
       console.error('error: ' + err)
     } else {
