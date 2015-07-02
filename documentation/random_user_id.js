@@ -3,6 +3,6 @@ require('./helpers.js')();
 
 var hdnode = bitcoin.HDNode.fromSeedHex(randomHex(64), bitcoin.networks.testnet)
 
-var user = hdnode.toBase58(false);
+var userid = hdnode.toBase58(false);
 
-console.log("user:"+user)
+console.log("userid:"+userid)

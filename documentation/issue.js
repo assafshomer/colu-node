@@ -2,10 +2,11 @@
 var bitcoin = require('bitcoinjs-lib');
 var Colu = require('../src/index.js');
 var User = require('../src/user.js');
+require('./helpers.js')();
 
-var privateSeed = 'c507290be50bc29a787af1901ff80e1c9f17e4020ee0a4fd51495ee4424d6150';
+var privateSeed = randomHex(64);
 
-var hdnode = bitcoin.HDNode.fromSeedHex('c507290be50bca9b887af39019f80e2f9f27e4020ee0a4fe51595ee4424d6151', bitcoin.networks.testnet)
+var hdnode = bitcoin.HDNode.fromSeedHex(randomHex(64), bitcoin.networks.testnet)
 
 var userid = hdnode.toBase58(false);
 
